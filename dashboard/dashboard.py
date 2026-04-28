@@ -8,8 +8,8 @@ sns.set(style='dark')
 # ==================== HELPER FUNCTIONS ====================
 @st.cache_data
 def load_data():
-    hour_df = pd.read_csv("hour_clean.csv")
-    day_df = pd.read_csv("day_clean.csv")
+    hour_df = pd.read_csv("dashboard/hour_clean.csv")
+    day_df = pd.read_csv("dashboard/day_clean.csv")
     hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
     day_df['dteday'] = pd.to_datetime(day_df['dteday'])
     return hour_df, day_df
